@@ -1,0 +1,80 @@
+.blur 
+{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px); 
+    height: 100%;
+    width: 100%;
+}
+/* .background 
+{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    position: relative;
+    /* padding:0; */
+    /* margin:0; */
+    /* left: 0; */
+    /* top: 0px; */
+    /* overflow:hidden; */
+/* } */
+ 
+/* .background
+{
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+    z-index: -100;
+    padding: 0;
+    position: absolute;
+} */
+
+/* .background video
+{
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    z-index: -1000;
+    object-fit: contain;
+} */
+
+.background
+{
+    height:400px;
+    width:100%;
+    overflow:hidden;
+    /* object-fit: cover;
+    z-index: -100; */
+}
+
+.background > video
+{
+    min-width: 100%;
+    min-height: 600px;
+}
+
+/*
+.bg-video
+{
+    min-height: 100%;
+    min-width:100%; 
+    /* background-size: cover; */
+    /* position:absolute;
+    top: 0;
+    bottom:0;
+    z-index: -1000; */
+    /* left: 0; */
+    /* overflow: hidden; */
+/* }  */
+/* 
+.bg-video
+{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+} */
