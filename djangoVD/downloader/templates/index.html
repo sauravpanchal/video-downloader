@@ -12,7 +12,7 @@
 
     <title>Video Downloader</title>
 </head>
-<body class="d-flex flex-column min-vh-100 bg-secondary text-white">
+<body class="d-flex flex-column min-vh-100 bg-secondary text-white" onload="showAlert()">
     <nav class="navbar sticky-top navbar-dark bg-dark">
         <a class="mx-auto navbar-brand" href="index.html">
             <img src="media/logo.png" width="35" height="35" class="d-inline-block align-top" alt="navbar-heading">
@@ -74,4 +74,10 @@
     </footer>
 
 </body>
+<script>
+    function showAlert()
+    {
+        alert("NOTE:\n1.) Video will be downloaded in highest available resolution only (for now) \n2.) It may take a while to download due to higher resolution")
+    }
+</script>
 </html>
