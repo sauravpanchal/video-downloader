@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+from pickle import TRUE
+# import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhitenoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'djangoVD.urls'
@@ -134,4 +136,15 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
+
+if os.getcwd() == "/app":
+    import dj_database_url
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+    ALLOWED_HOSTS = ["vd-by-saurav.heroukuapp.com"]
+    DEBUG = True
+
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
