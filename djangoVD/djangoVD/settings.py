@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-8c&ois^*sq6!u08rq=o$(+qdbm5tqz@v@z&dtjg!!q&cdl)p_9
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vd-by-saurav.herokuapp.com']
 
 
 # Application definition
@@ -138,8 +139,6 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
-
-ALLOWED_HOSTS = ['vd-by-saurav.herokuapp.com']
 
 # if os.getcwd() == "/app":
 #     import dj_database_url
